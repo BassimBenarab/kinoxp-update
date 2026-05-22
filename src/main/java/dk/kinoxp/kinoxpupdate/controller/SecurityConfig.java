@@ -23,13 +23,13 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/api/showings/active").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/reservations/showing/*/seats").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/reservations").permitAll()
-                        .requestMatchers("/admin/login").permitAll()
+                        .requestMatchers("/admin/login", "/admin/login.html").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
-                        .loginPage("/admin/login")
+                        .loginPage("/admin/login.html")
                         .loginProcessingUrl("/admin/login")
-                        .defaultSuccessUrl("/", false) // ⚡ vigtig: false = ingen loop
+                        .defaultSuccessUrl("/admin/index.html", true)
                         .permitAll()
                 )
                 .logout(logout -> logout
