@@ -4,12 +4,10 @@ Spring Boot-baseret system til håndtering af filmforestillinger og billetreserv
 
 ## Kom i gang
 
-VIDEOLINK: https://www.youtube.com/@Benarez16
-
-### Kør med Docker Compose
+### Kør lokalt
 
 ```bash
-docker compose up --build
+./mvnw spring-boot:run
 ```
 
 Åbn http://localhost:8080
@@ -17,13 +15,8 @@ docker compose up --build
 ### Admin-panel
 
 Gå til http://localhost:8080/admin/login.html
+
 Brugernavn: `admin` | Adgangskode: `kinoxp2024`
-
-### Kør lokalt
-
-```bash
-./mvnw spring-boot:run
-```
 
 ### Kør tests
 
@@ -31,10 +24,18 @@ Brugernavn: `admin` | Adgangskode: `kinoxp2024`
 ./mvnw test
 ```
 
+### Docker (kræver Docker installeret)
+
+```bash
+docker compose up --build
+```
+
+Åbn http://localhost:8080
+
 ## Arkitektur
 
 - **Backend**: Spring Boot 4, Spring Web, Spring Data JPA, Spring Security
-- **Database**: MySQL (produktion), H2 (tests)
+- **Database**: MySQL (Docker/produktion), H2 (lokal kørsel og tests)
 - **Frontend**: HTML/CSS/JavaScript (ingen frameworks)
 - **Java**: Java 25
 
