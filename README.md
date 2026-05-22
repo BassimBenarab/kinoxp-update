@@ -4,6 +4,8 @@ Spring Boot-baseret system til håndtering af filmforestillinger og billetreserv
 
 ## Kom i gang
 
+VIDEOLINK: https://www.youtube.com/@Benarez16
+
 ### Kør med Docker Compose
 
 ```bash
