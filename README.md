@@ -4,6 +4,8 @@ Spring Boot-baseret system til håndtering af filmforestillinger og billetreserv
 
 ## Kom i gang
 
+VIDEOLINK: https://youtu.be/J2wm0b_UJsk
+
 ### Kør lokalt
 
 ```bash
